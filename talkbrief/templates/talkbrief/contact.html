@@ -1,0 +1,126 @@
+{% extends "talkbrief/base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<!-- Include Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    /* Additional Custom Styles */
+    body {
+        background: #121212;
+        color: #fff;
+    }
+
+    #contact-section {
+        background: #1e1e1e;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #contact-section h1,
+    #contact-section h2 {
+        color: rgb(93, 93, 255);
+    }
+
+    #contact-section p {
+        color: #ccc;
+    }
+
+    .social-links a {
+        color: #ccc;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .social-links a:hover {
+        color: rgb(93, 93, 255);
+        transform: scale(1.2);
+    }
+
+    .contact-form {
+        background: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .contact-form label {
+        color: #ccc;
+    }
+</style>
+
+<section id="contact-section" class="container mt-5">
+    <div class="text-center mb-4">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us through our official channels:</p>
+    </div>
+    <div class="row">
+        <!-- Email -->
+        <div class="col-md-6 mb-4">
+            <div class="bg-dark p-4 rounded">
+                <h2>Email Us</h2>
+                <p>info@talkbrief.com</p>
+            </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="col-md-6 mb-4">
+            <div class="bg-dark p-4 rounded">
+                <h2>Call Us</h2>
+                <p>(042)35880007 / +92(321)7654321</p>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Address -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="bg-dark p-4 rounded text-center">
+                <h2>Our Location</h2>
+                <p>1 Khayaban-e-Jinnah, Pir Mansur Johar Town, Lahore, Punjab</p>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="contact-form p-4">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Social Media Links -->
+    <div class="text-center social-links">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:nabeelahmad2x@hotmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</section>
+
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

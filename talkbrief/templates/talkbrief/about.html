@@ -1,0 +1,158 @@
+{% extends "talkbrief/base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background: #121212;
+        color: #fff;
+    }
+
+    .container {
+        background: #1e1e1e;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+    }
+
+    h1,
+    h2 {
+        color: rgb(93, 93, 255);
+    }
+
+    p {
+        color: #ccc;
+    }
+
+    .organization-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 10px;
+    }
+
+
+    #team-members {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #team-members .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #team-members .member {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #team-members .member:nth-child(1) {
+        order: -1;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #team-members .member:nth-child(n+2) {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+
+    #team-members .member img {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .social-links a {
+        color: #ccc;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .social-links a:hover {
+        color: rgb(93, 93, 255);
+        transform: scale(1.2);
+    }
+</style>
+
+<body>
+    <section id="organization-info" class="container">
+        {% load static %}
+        <img src="{% static 'talkbrief/images/ucp2.png' %}" alt="Image of UCP" class="organization-image">
+        <h1>University of Central Punjab</h1>
+        <p>At the University of Central Punjab, we're proud to be a leading educational institution in Lahore, Pakistan.
+            Since 2002, we've provided a comprehensive range of undergraduate and postgraduate programs, from
+            engineering and computer science to business and social sciences. We believe in fostering well-rounded
+            individuals, so our students enjoy not only modern academic facilities and labs but also a vibrant campus
+            life with sports complexes and entrepreneurship initiatives. Our business school is a particular point of
+            pride, consistently ranking among the top in Lahore. We're also actively engaged in international
+            collaborations, bringing fresh perspectives to our classrooms and research endeavors. If you're seeking a
+            dynamic and enriching educational experience, we invite you to consider UCP!</p>
+    </section>
+
+
+
+    <section id="team-members" class="container">
+        <h2>Main Team Members</h2><br>
+        <div class="row">
+            <div class="col-md-4 member">
+                {% load static %}
+                <img src="{% static 'talkbrief/images/member3.jpg' %}" alt="Project Manager Pic">
+                <h3>M. Umar Hameed</h3>
+                <h4>Project Advisor</h4>
+                <!-- <p>Role and responsibilities of Member 1.</p> -->
+            </div>
+            <div class="col-md-4 member">
+                {% load static %}
+                <img src="{% static 'talkbrief/images/member3.jpg' %}" alt="Member 1 Pic">
+                <h3>Nabeel Ahmad</h3>
+                <h4>Backend Developer</h4>
+                <!-- <p>Role and responsibilities of Member 1.</p> -->
+            </div>
+            <div class="col-md-4 member">
+                {% load static %}
+                <img src="{% static 'talkbrief/images/member3.jpg' %}" alt="Member 2 Pic">
+                <h3>Fizzah Asif</h3>
+                <h4>Models & Algo</h4>
+                <!-- <p>Role and responsibilities of Member 1.</p> -->
+            </div>
+            <div class="col-md-4 member">
+                {% load static %}
+                <img src="{% static 'talkbrief/images/member3.jpg' %}" alt="Member 3 Pic">
+                <h3>Ahsan Ali</h3>
+                <h4>Frontend Developer</h4>
+                <!-- <p>Role and responsibilities of Member 1.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="project-challenges" class="container">
+        <h2>Overcoming Challenges</h2>
+        <p>These are some of the challenges we overcame during the development of our first app:
+            <br>1. Successfully integrated multiple third-party APIs for enhanced functionality.
+            <br>2. Ensured a uniform and user-friendly interface across various devices and screen sizes.
+            <br>3. Identified and resolved critical bugs that could have affected the user experience.
+            <br>4. Maintained effective communication and collaboration among team members despite remote working
+            conditions.
+        </p>
+    </section>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% endblock %}
